@@ -24,7 +24,8 @@ gulp.task('bundle', ['clean'], function() {
 });
 
 gulp.task('debug', ['clean'], function() {
-	gulp.src('js/**/*.js').pipe(require('gulp-jsx')({factory: "React.createElement"})).pipe(gulp.dest('./docroot/js/'));
+	var react = require('gulp-react');
+	gulp.src('js/**/*.js').pipe(react()).pipe(gulp.dest('./docroot/js/'));
 });
 
 gulp.task('clean', function(callback) {

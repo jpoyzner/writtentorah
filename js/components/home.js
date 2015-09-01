@@ -1,14 +1,13 @@
-define(['react', 'jquery'], function(React, $) {
-	return React.createElement(
-		React.createClass({
-			handleClick: function() {
-				alert('Hello!');
-			},
-			render: function() {
-				return (
-					<a href="#" onClick={this.handleClick}>Do something!</a>
-				);
-			}
-		})
-	);
+define(['react', 'jquery', 'underscore', 'components/parsha'], function(React, $, _, Parsha) {
+	return React.createClass({
+		render: function() {
+			return (
+				<div>
+					{this.props.parshas.map(function(parsha) {
+						return <Parsha data={parsha} />
+					})}
+				</div>
+			)
+		}
+	});
 });

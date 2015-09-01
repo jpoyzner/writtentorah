@@ -8,5 +8,7 @@ requirejs.config({
 });
 
 requirejs(['react', 'jquery', 'components/home'], function(React, $, HomeComponent) {
-	React.render(HomeComponent, $('body')[0]);
+	var parshas = ["Beresheet", "Noah"];
+	
+	React.render(React.createElement(HomeComponent, {parshas: parshas}), $('body')[0]);
 });
