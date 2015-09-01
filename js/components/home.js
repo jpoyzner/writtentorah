@@ -1,4 +1,4 @@
-define(['react', 'jquery', 'underscore', 'components/parsha'], function(React, $, _, Parsha) {
+define(['react', 'jquery', 'components/parsha'], function(React, $, Parsha) {
 	return React.createClass({
 		render: function() {
 			return (
