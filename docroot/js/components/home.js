@@ -1,4 +1,4 @@
-define(['react'], function(React) {
+define(['react', 'jquery'], function(React, $) {
 	return React.createElement(
 		React.createClass({
 			handleClick: function() {
@@ -9,7 +9,6 @@ define(['react'], function(React) {
 					React.createElement('a', {href: "#", onClick: this.handleClick}, ["Do something!"])
 				);
 			}
-		}),
-		$('body').get(0)
+		})
 	);
 });
