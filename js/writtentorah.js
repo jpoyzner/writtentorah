@@ -17,8 +17,6 @@ requirejs.config({
     }
 });
 
-requirejs(['jquery', 'react', 'components/home'], function($, React, HomeComponent) {
-	var parshas = ["Beresheet", "Noah"];
-	
-	React.render(React.createElement(HomeComponent, {parshas: parshas}), $('body')[0]);
+requirejs(['react', 'components/page', 'jquery'], function(React, Page, $) {
+	React.render(React.createElement(Page), $('body')[0]);
 });
