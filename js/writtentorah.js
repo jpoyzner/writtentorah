@@ -4,11 +4,20 @@ requirejs.config({
         backbone: '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone-min',
         underscore: '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min',
         react: '//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min',
-        firebase: '//cdn.firebase.com/js/client/2.2.1/firebase'
+        firebase: '//cdn.firebase.com/js/client/2.2.1/firebase',
+        backfire: '//github.com/firebase/backbonefire/releases/download/v0.5.1/backbonefire.min'
+    },
+    shim: {
+	    firebase: {
+	        exports: 'Firebase'
+	    },
+	    backfire: {
+            deps: ['backbone', 'firebase']
+        }
     }
 });
 
-requirejs(['react', 'jquery', 'components/home', 'firebasetest'], function(React, $, HomeComponent) {
+requirejs(['jquery', 'react', 'components/home'], function($, React, HomeComponent) {
 	var parshas = ["Beresheet", "Noah"];
 	
 	React.render(React.createElement(HomeComponent, {parshas: parshas}), $('body')[0]);
