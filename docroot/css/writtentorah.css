@@ -2,30 +2,59 @@
 	background-color: black;
     height: 100%;
     left: 0;
+    overflow: scroll;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-#wt-title { 
-    font-size: 5em;
+#wt-title {
+	color: white;
+    font-size: 4.5vw;
     left: 3%;
+    margin: 10vh 0 100vh;
     position: relative;
     text-align: center;
-    top: -8%;
+    top: -6vh;
 }
 
 #wt-home {
-	background: url(../images/torah.png) 0 50% no-repeat;
-    background-size: 100% 80%;
-	height: 100%;
+	background: url(../images/torah.png) no-repeat;
+    background-size: 100% 100vh;
+	height: 1000px; /* THIS CAN BE JUST SET WITH CONTENT WHEN IT'S THERE */
     width: 100%;
 }
 
+.wt-parsha {
+	color: white;
+	font-size: 2em;
+}
+
 .wt-parsha.expanded {
-	height: 100%;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
+	background: url(../images/torah.png);
+    background-size: 8.35% 10.07%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.wt-parsha-preview {
+	left: 3%;
+	position: relative;
+	text-align: center;
+}
+
+.wt-parsha .wt-parsha-details {
+	background: black;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 8.35%;
+    height: 80%;
+    overflow: scroll;
+    padding: 5%;
+    position: fixed;
+    width: 83%;
+    top: 10.07%;
 }

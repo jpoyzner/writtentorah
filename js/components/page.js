@@ -18,7 +18,9 @@ define(['react', 'collections/parshas', 'components/home', 'components/parsha'],
 			return (
 			    <div id="wt-page">
 					<Home parshas={this.state.parshas} />
-					<Parsha expanded={!!selectedParsha} model={selectedParsha} index={this.state.selectedParshaIndex} />
+					{!!selectedParsha ?
+						<Parsha expanded={true} model={selectedParsha} index={this.state.selectedParshaIndex} />
+						: ""}
 				</div>
 			);
 		},

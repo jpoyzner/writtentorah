@@ -18,7 +18,9 @@ define(['react', 'collections/parshas', 'components/home', 'components/parsha'],
 			return (
 			    React.createElement("div", {id: "wt-page"}, 
 					React.createElement(Home, {parshas: this.state.parshas}), 
-					React.createElement(Parsha, {expanded: !!selectedParsha, model: selectedParsha, index: this.state.selectedParshaIndex})
+					!!selectedParsha ?
+						React.createElement(Parsha, {expanded: true, model: selectedParsha, index: this.state.selectedParshaIndex})
+						: ""
 				)
 			);
 		},
