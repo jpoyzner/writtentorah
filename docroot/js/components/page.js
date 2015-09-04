@@ -4,8 +4,7 @@ define(['react', 'collections/parshas', 'components/home', 'components/parsha'],
 			window.page = this;
 			
 			new Parshas().on('sync', function(parshas) { //TODO: should we ever load individual parsha data? (for efficiency)
-				this.parshas = parshas; //save
-				this.home();
+				this.setState({parshas: parshas});
 		    }.bind(this));
 			
 		    return {parshas: []};
@@ -27,7 +26,7 @@ define(['react', 'collections/parshas', 'components/home', 'components/parsha'],
 			this.setState({selectedParshaIndex: index});
 		},
 		home: function() {
-			this.setState({parshas: this.parshas});
+			this.setState({selectedParshaIndex: -1});
 		}
 	});
 });
