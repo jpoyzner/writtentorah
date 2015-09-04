@@ -1,3 +1,8 @@
+@font-face {
+    font-family: hebrew;
+    src: url(../fonts/Sholom.ttf);
+} 
+
 #wt-page {
 	background-color: black;
     height: 100%;
@@ -10,6 +15,7 @@
 
 #wt-title {
 	color: white;
+	font-family: hebrew;
     font-size: 4.5vw;
     left: 3%;
     margin: 10vh 0 100vh;
