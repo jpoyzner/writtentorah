@@ -6,7 +6,8 @@ define(['react', 'components/parsha'], function(React, Parsha) {
 			}
 			
 			return (
-				<div>
+				<div id="wt-home">
+					<p id="wt-title">Written in the Torah</p>
 					{this.props.parshas.map(function(parsha, index) {
 						return <Parsha model={parsha} index={index} />
 					})}
