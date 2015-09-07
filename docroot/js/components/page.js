@@ -1,10 +1,15 @@
-define(['react', 'collections/parshas', 'components/home', 'components/parsha'], function(React, Parshas, Home, Parsha) {
+define(['react', 'collections/parshas', 'components/home', 'components/parsha'],
+function(React, Parshas, Home, Parsha) {
 	return React.createClass({
 		getInitialState: function() {
 			window.page = this;
 			
-			new Parshas().on('sync', function(parshas) { //TODO: should we ever load individual parsha data? (for efficiency)
+			new Parshas().on('sync', function(parshas) {
 				this.setState({parshas: parshas});
+				
+				require(['scrollintoview'], function() {
+					$('#wt-intro').scrollIntoView(1000);
+				});
 		    }.bind(this));
 			
 		    return {parshas: []};

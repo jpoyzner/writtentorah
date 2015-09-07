@@ -1,22 +1,43 @@
 @font-face {
     font-family: hebrew;
     src: url(../fonts/Sholom.ttf);
-} 
+}
+
+a {
+	cursor: pointer;
+}
+
+a:hover,
+.closed {
+	color: yellow;
+}
 
 #wt-page {
 	background-color: black;
+	color: white;
+	font-size: 4.5vw;
     height: 100%;
     left: 0;
+    line-height: 6vw;
     overflow: scroll;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
+#wt-home {
+	background: url(../images/torah.png) no-repeat;
+    background-size: 100% 90vh;
+    font-family: hebrew;
+    width: 100%;
+}
+
+#wt-home > * {
+	text-align: center;
+}
+
 #wt-title {
-	color: white;
-	font-family: hebrew;
-    font-size: 4.5vw;
+	color: yellow;
     left: 3%;
     margin: 10vh 0 100vh;
     position: relative;
@@ -24,16 +45,8 @@
     top: -6vh;
 }
 
-#wt-home {
-	background: url(../images/torah.png) no-repeat;
-    background-size: 100% 100vh;
-	height: 1000px; /* THIS CAN BE JUST SET WITH CONTENT WHEN IT'S THERE */
-    width: 100%;
-}
-
-.wt-parsha {
-	color: white;
-	font-size: 2em;
+#wt-intro {
+	padding: 0 5vw;
 }
 
 .wt-parsha.expanded {
@@ -49,18 +62,71 @@
 .wt-parsha-preview {
 	left: 3%;
 	position: relative;
-	text-align: center;
 }
 
-.wt-parsha .wt-parsha-details {
+.wt-parsha-details {
 	background: black;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: hebrew;
     left: 8.35%;
     height: 80%;
     overflow: scroll;
-    padding: 5%;
+    padding: 0 5%;
     position: fixed;
+    text-align: center;
     width: 83%;
     top: 10.07%;
+}
+
+.wt-parsha-details > a {
+	border: 1px solid;
+	font-size: 7vh;
+	padding: 5px;
+}
+
+.wt-written {
+	font-family: serif;
+	line-height: 5vw;
+	margin-bottom: 5vw;
+    text-align: left;
+}
+
+.wt-parsha-help {
+	font-size: 3vw;
+    font-family: serif;
+    line-height: 4vw;
+}
+
+.wt-text {
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+	font-size: 2vw;
+	display: block;    
+    border-radius: 10px;
+	height: 70%;
+	margin: 1% 0;
+	padding: 1vw;
+	resize: none;
+    width: 100%;
+}
+
+.wt-password-text,
+.wt-author-text,
+.wt-cong-text {
+    font-family: serif;
+    font-size: 7vh;
+}
+
+.wt-password,
+.wt-author,
+.wt-cong {
+	font-size: 2vw;
+	height: 2vw;
+    position: relative;
+    top: -0.5vw;
+}
+
+.wt-home {
+	margin-right: 1vw;
 }
