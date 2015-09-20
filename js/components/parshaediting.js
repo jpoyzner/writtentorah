@@ -8,6 +8,7 @@ define(['react'], function(React) {
 			
 			var author = this.props.model.get('author');
 			var cong = this.props.model.get('cong');
+			var contact = this.props.model.get('contact');
 			
 			return (
 				<span>
@@ -18,6 +19,9 @@ define(['react'], function(React) {
 					<br />
 					<span className={'wt-cong-text'}>FROM: </span>
 					<input className={'wt-cong'} defaultValue={cong ? cong : ''} />
+					<br />
+					<span className={'wt-contact-text'}>CONTACT: </span>
+					<input className={'wt-contact'} defaultValue={contact ? contact : ''} />
 					<br />
 					<span className={'wt-password-text'}>PASSWORD: </span>
 					<input className={'wt-password'} />

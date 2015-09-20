@@ -46,6 +46,7 @@ a:hover,
 }
 
 #wt-intro {
+	font-family: serif;
 	padding: 0 5vw;
 }
 
@@ -90,6 +91,8 @@ a:hover,
 	line-height: 5vw;
 	margin-bottom: 5vw;
     text-align: left;
+    white-space: pre;
+    word-wrap: break-word;
 }
 
 .wt-parsha-help {
@@ -105,26 +108,30 @@ a:hover,
 	display: block;    
     border-radius: 10px;
 	height: 70%;
-	margin: 1% 0;
+	margin: 1% 10%;
 	padding: 1vw;
 	resize: none;
-    width: 100%;
+    width: 80%;
 }
 
 .wt-password-text,
 .wt-author-text,
-.wt-cong-text {
+.wt-cong-text,
+.wt-contact-text {
     font-family: serif;
     font-size: 7vh;
+    margin-bottom: 4vh;
 }
 
 .wt-password,
 .wt-author,
-.wt-cong {
-	font-size: 2vw;
-	height: 2vw;
+.wt-cong,
+.wt-contact {
+	font-size: 7vh;
+	height: 7vh;
+	margin-bottom: 2vh;
+	max-width: 60vw;
     position: relative;
-    top: -0.5vw;
 }
 
 .wt-home {

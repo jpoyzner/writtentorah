@@ -8,6 +8,7 @@ define(['react'], function(React) {
 			
 			var author = this.props.model.get('author');
 			var cong = this.props.model.get('cong');
+			var contact = this.props.model.get('contact');
 			
 			return (
 				React.createElement("span", null, 
@@ -18,6 +19,9 @@ define(['react'], function(React) {
 					React.createElement("br", null), 
 					React.createElement("span", {className: 'wt-cong-text'}, "FROM: "), 
 					React.createElement("input", {className: 'wt-cong', defaultValue: cong ? cong : ''}), 
+					React.createElement("br", null), 
+					React.createElement("span", {className: 'wt-contact-text'}, "CONTACT: "), 
+					React.createElement("input", {className: 'wt-contact', defaultValue: contact ? contact : ''}), 
 					React.createElement("br", null), 
 					React.createElement("span", {className: 'wt-password-text'}, "PASSWORD: "), 
 					React.createElement("input", {className: 'wt-password'}), 

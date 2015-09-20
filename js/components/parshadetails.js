@@ -22,7 +22,7 @@ define(['react', 'components/parshawritten', 'components/parshaediting'], functi
 					return;
 				}
 				
-				this.props.model.set({text: $('.wt-text').val(), author: $('.wt-author').val(), cong: $('.wt-cong').val()});
+				this.props.model.set({text: $('.wt-text').val(), author: $('.wt-author').val(), cong: $('.wt-cong').val(), contact: $('.wt-contact').val()});
 				this.setState({editing: false});
 			} else {
 				this.setState({editing: true});
