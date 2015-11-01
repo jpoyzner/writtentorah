@@ -46,3 +46,7 @@ gulp.task('clean', function(callback) {
 gulp.task('deploy', function() {
 	//TODO: ADD DEPLOYMENT TO S3                                        
 });
+
+gulp.task('backup', require('gulp-shell').task([
+	"curl https://scorching-torch-6675.firebaseio.com/.json?format=export > backups/data.json"
+]));
