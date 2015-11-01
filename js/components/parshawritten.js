@@ -7,7 +7,7 @@ define(['react'], function(React) {
 			
 			return (
 				<span>
-					<div className={'wt-written'}>{this.props.model.get('text') || "Still open! Click on EDIT below!"}</div>
+					<div className={'wt-written'} dangerouslySetInnerHTML={{__html: this.props.model.get('text').replace(/[\n\r]/g, '<br>') || "Still open! Click on EDIT below!"}} />
 					{author ? <div className={'wt-author-text'}>By: {author}</div> : ""}
 					{cong ? <div className={'wt-cong-text'}>From: {cong}</div> : ""}
 					{contact ? <div className={'wt-contact-text'}>Contact: {contact}</div> : ""}

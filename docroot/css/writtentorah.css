@@ -91,7 +91,6 @@ a:hover,
 	line-height: 5vw;
 	margin-bottom: 5vw;
     text-align: left;
-    white-space: pre;
     word-wrap: break-word;
 }
 
@@ -127,7 +126,7 @@ a:hover,
 .wt-author,
 .wt-cong,
 .wt-contact {
-	font-size: 7vh;
+	font-size: 6vh;
 	height: 7vh;
 	margin-bottom: 2vh;
 	max-width: 60vw;
